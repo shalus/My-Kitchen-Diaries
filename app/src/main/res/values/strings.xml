@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">My Kitchen Diaries</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_add_recipe">Add a Recipe</string>
+    <string name="image_action">Pick an action</string>
+    <string name="edit_text_title">Title</string>
+    <string name="edit_text_ingredient">Input Ingredient</string>
+    <string name="edit_text_step">Input Step</string>
+
+    <string name="permission_denied">Permission denied</string>
+    <string name="saved_message">Image Saved at %1$s</string>
+    <string name="error">Error finding image</string>
+    <string name="recipe_added">Recipe added to diary successfully</string>
+    <string name="enter_title">Please enter a recipe title</string>
+    <string name="empty_message">Start creating your recipes!</string>
+
+    <string name="content_authority" translatable="false">com.shalu.kitchendiaries.provider</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_share">Share</string>
+    <string name="delete_recipe">Recipe Deleted</string>
+    <string name="recipe_name" translatable="false">RECIPE_TITLE</string>
+    <string name="image_path" translatable="false">IMAGE</string>
+    <string name="ingredient_list" translatable="false">ING_LIST</string>
+    <string name="step_list" translatable="false">STEP_LIST</string>
+    <string name="title_activity_shopping">ShoppingActivity</string>
+    <string name="tab_text_1">Shopping List</string>
+    <string name="tab_text_2">Notify me!</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="added_to_cart">Item added to shopping list</string>
+    <string name="removed_from_cart">Removed item from shopping list</string>
+    <string name="edit_text_shopping">Item</string>
+    <string name="settings_label">Settings</string>
+    <string name="enable_geofences">Enable Geofences</string>
+    <string name="location_permissions">Location Permissions</string>
+    <string name="add_new_location">Add new location</string>
+    <string name="location_list">Locations</string>
+    <string name="privacy" translatable="false">http://www.google.com/policies/privacy</string>
+    <string name="touch_to_relaunch">Touch to view the list of shopping items</string>
+    <string name="view_shopping_list">View Shopping List</string>
+    <string name="need_location_permission_message">You need to enable location permissions first</string>
+    <string name="setting_enabled">EnabledSetting</string>
+    <string name="appwidget_text">Shopping List</string>
+    <string name="add_widget">Shopping List</string>
+    <string name="notify_me">Notify Me</string>
+    <string name="add_to_diary">ADD TO DIARY</string>
+    <string name="steps_label">Steps</string>
+    <string name="ingredient_label">Ingredients</string>
+    <string name="confirm_exit">Your changes are not saved. Are you sure you want to exit?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <string name="add_a_recipe">Add a recipe</string>
+    <string name="view_recipes">View Recipes</string>
+    <string name="manage_shopping">Manage Shopping</string>
+    <string name="transition_image">transition_image</string>
+    <string name="remove_from_cart">Remove shopping item</string>
+    <string name="remove_step">Remove step</string>
+    <string name="remove_place">Remove location from list</string>
+    <string name="add_to_shopping">Add to shopping list</string>
+    <string name="add_image">Add a picture of the recipe</string>
+    <string name="add_ingredient">Add a ingredient</string>
+    <string name="remove_ingredient">Remove ingredient</string>
+    <string name="add_step">Add a step</string>
+    <string name="about">About</string>
+    <string name="about_text">My Kitchen Diaries help you save your recipes and manage your grocery shopping. Pen down your own recipes in a quick and organized way with a photo for later viewing and sharing. My Kitchen Diaries will be your digital book of recipes.\n\nIt also manages your shopping list. Note down your missing ingredients and get notified when you enter your desired grocery stores</string>
+</resources>

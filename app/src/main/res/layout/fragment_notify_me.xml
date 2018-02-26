@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/fragment_margin_bottom"
+        android:layout_marginLeft="@dimen/padding_or_margin_16"
+        android:layout_marginRight="@dimen/padding_or_margin_16"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_or_margin_16"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_or_margin_4"
+                android:paddingRight="@dimen/padding_or_margin_8"
+                android:paddingEnd="@dimen/padding_or_margin_8"
+                android:paddingTop="@dimen/padding_or_margin_4"
+                app:srcCompat="@drawable/ic_globe_primary_24dp" />
+
+            <Switch
+                android:id="@+id/enable_switch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:text="@string/notify_me"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_or_margin_4"
+                android:paddingRight="@dimen/padding_or_margin_8"
+                android:paddingEnd="@dimen/padding_or_margin_8"
+                android:paddingTop="@dimen/padding_or_margin_4"
+                app:srcCompat="@drawable/ic_my_location_primary_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/location_permissions"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <CheckBox
+                    android:id="@+id/location_permission_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_or_margin_8"
+                    android:onClick="onLocationPermissionClicked" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_location"
+            android:id="@+id/add_place_button"
+            android:contentDescription="@string/add_new_location"
+            android:background="@color/colorPrimary"
+            android:text="@string/add_new_location"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_location"
+            android:text="@string/location_list"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/separator"
+            android:layout_marginTop="@dimen/padding_or_margin_4"
+            android:background="@color/colorPrimary" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/places_list_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding_or_margin_4"
+            android:src="@drawable/powered_by_google_light" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:paddingBottom="@dimen/padding_or_margin_4"
+            android:text="@string/privacy"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="image_action_array" >
+      <item> "Choose image from Gallery" </item>
+        <item>"Take a picture"</item>
+    </string-array>
+
+    <string-array name="set_image_action_array">
+        <item>"Share Image"</item>
+        <item>"Remove Image"</item>
+    </string-array>
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/add_recipe"
+            android:icon="@drawable/ic_add_circle_black_24dp"
+            android:title="@string/add_a_recipe"
+            android:contentDescription="@string/add_a_recipe"/>
+        <item
+            android:id="@+id/view_recipe"
+            android:icon="@drawable/ic_view_list"
+            android:title="@string/view_recipes"
+            android:contentDescription="@string/view_recipes"/>
+        <item
+            android:id="@+id/manage_shopping"
+            android:icon="@drawable/ic_shopping"
+            android:title="@string/manage_shopping"
+            android:contentDescription="@string/manage_shopping"/>
+    </group>
+
+            <item
+            android:id="@+id/about"
+            android:title="@string/about"
+            android:contentDescription="@string/about"/>
+
+
+</menu>

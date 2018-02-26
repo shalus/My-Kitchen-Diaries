@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shalu.mykitchendiaries">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_mkd"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_mkd_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBk_uECPNw_MIESrrBeV1SUmI00m-oriis" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.shalu.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name=".provider.generated.KitchenProvider"
+            android:authorities="@string/content_authority" />
+
+        <receiver android:name=".GeofenceBroadcastReceiver" />
+
+        <activity
+            android:name=".ui.HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.AddRecipe"
+            android:label="@string/title_activity_add_recipe"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.HomeActivity"/>
+        <activity android:name=".ui.ViewRecipeActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.HomeActivity"/>
+        <activity
+            android:name=".ui.ShoppingActivity"
+            android:label="@string/title_activity_shopping"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.HomeActivity"/>
+
+        <receiver android:name=".widget.AddRecipeWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/kitchen_diary_widget_info" />
+        </receiver>
+        <receiver android:name=".widget.ShoppingListWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/shopping_list_widget_info" />
+        </receiver>
+
+        <service
+            android:name=".FirebaseJobService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

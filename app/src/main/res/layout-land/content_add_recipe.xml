@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:padding="@dimen/padding_or_margin_16"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.shalu.mykitchendiaries.ui.AddRecipe"
+    tools:showIn="@layout/activity_add_recipe">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_or_margin_16"
+            android:hint="@string/edit_text_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintRight_toLeftOf="@+id/ib_image"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <ImageButton
+            android:id="@+id/ib_image"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
+            android:layout_marginTop="@dimen/padding_or_margin_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/add_image"
+            app:layout_constraintLeft_toRightOf="@+id/et_title"
+            android:layout_marginLeft="@dimen/padding_or_margin_16"
+            android:layout_marginStart="@dimen/padding_or_margin_16"
+            app:srcCompat="@drawable/ic_add_a_photo_black_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="@dimen/image_width"
+            android:layout_height="@dimen/image_height"
+            android:layout_marginTop="@dimen/padding_or_margin_16"
+            android:scaleType="fitStart"
+            android:visibility="invisible"
+            android:layout_marginLeft="@dimen/padding_or_margin_16"
+            android:layout_marginStart="@dimen/padding_or_margin_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/et_title"/>
+
+        <TextView
+            android:id="@+id/tv_ingredients"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_or_margin_8"
+            android:layout_marginTop="@dimen/padding_or_margin_16"
+            android:layout_marginRight="@dimen/padding_or_margin_16"
+            android:text="@string/ingredient_label"
+            android:background="@color/colorIngredient"
+            android:textColor="@color/icons"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_title"
+            app:layout_constraintRight_toLeftOf="@+id/ib_image"/>
+        <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+            android:id="@+id/lv_ingredients"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ib_image"
+            android:layout_marginRight="@dimen/padding_or_margin_16"
+            android:layout_marginEnd="@dimen/padding_or_margin_16"
+            app:layout_constraintTop_toBottomOf="@id/tv_ingredients"
+           >
+
+        </com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView>
+
+        <EditText
+            android:id="@+id/et_ingredient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_or_margin_8"
+            android:padding="@dimen/padding_or_margin_8"
+            android:hint="@string/edit_text_ingredient"
+            android:background="@color/coloPrimaryLight"
+            app:layout_constraintEnd_toStartOf="@+id/button_add_ingredient"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lv_ingredients"/>
+
+        <ImageButton
+            android:id="@+id/button_add_ingredient"
+            android:layout_width="@dimen/image_button_width"
+            android:layout_height="@dimen/image_button_height"
+            android:layout_marginTop="@dimen/padding_or_margin_8"
+            android:layout_marginRight="@dimen/padding_or_margin_16"
+            android:layout_marginEnd="@dimen/padding_or_margin_16"
+            android:paddingTop="@dimen/padding_or_margin_8"
+            android:background="@color/coloPrimaryLight"
+            android:contentDescription="@string/add_ingredient"
+            android:foregroundGravity="fill"
+            app:layout_constraintLeft_toRightOf="@+id/et_ingredient"
+            app:layout_constraintTop_toBottomOf="@+id/lv_ingredients"
+            app:layout_constraintRight_toLeftOf="@+id/ib_image"
+            app:srcCompat="@drawable/ic_add_circle" />
+
+
+        <TextView
+            android:id="@+id/tv_steps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_or_margin_8"
+            android:layout_marginTop="@dimen/padding_or_margin_16"
+            android:layout_marginRight="@dimen/padding_or_margin_16"
+            android:text="@string/steps_label"
+            app:layout_constraintTop_toBottomOf="@+id/et_ingredient"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/icons"
+            android:background="@color/colorStep"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/ib_image"
+            tools:layout_editor_absoluteY="318dp" />
+
+        <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lv_steps"
+            app:layout_constraintTop_toBottomOf="@+id/tv_steps"
+            app:layout_constraintRight_toLeftOf="@+id/ib_image"
+            />
+        <EditText
+            android:id="@+id/et_step"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_or_margin_8"
+            android:padding="@dimen/padding_or_margin_8"
+            android:background="@color/colorStepLight"
+            android:hint="@string/edit_text_step"
+            app:layout_constraintEnd_toStartOf="@+id/button_add_step"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lv_steps"
+            />
+
+        <ImageButton
+            android:id="@+id/button_add_step"
+            android:background="@color/colorStepLight"
+            android:layout_width="@dimen/image_button_width"
+            android:layout_height="@dimen/image_button_height"
+            android:contentDescription="@string/add_step"
+            android:layout_marginTop="@dimen/padding_or_margin_8"
+            android:paddingTop="@dimen/padding_or_margin_8"
+            app:layout_constraintEnd_toStartOf="@+id/ib_image"
+            app:layout_constraintLeft_toRightOf="@+id/et_step"
+            app:layout_constraintTop_toBottomOf="@+id/lv_steps"
+            app:srcCompat="@drawable/ic_add_circle" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_or_margin_16"
+            android:background="@color/colorPrimary"
+            android:onClick="saveRecipe"
+            android:padding="@dimen/padding_or_margin_8"
+            android:text="@string/add_to_diary"
+            android:contentDescription="@string/add_to_diary"
+            android:textColor="@color/icons"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_step" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>
+
