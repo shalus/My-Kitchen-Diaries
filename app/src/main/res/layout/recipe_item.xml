@@ -31,6 +31,7 @@
             android:layout_height="@dimen/thumbnail_height"
             android:layout_margin="@dimen/thumbnail_margin"
             android:background="@android:drawable/ic_menu_camera"
+            android:contentDescription="@string/recipe_image"
             android:scaleType="centerCrop"
             android:layout_gravity="center"/>
         </FrameLayout>

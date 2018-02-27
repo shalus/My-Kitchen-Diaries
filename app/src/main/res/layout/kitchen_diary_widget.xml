@@ -9,6 +9,7 @@
         android:id="@+id/widget_button"
         android:layout_width="@dimen/widget_button_width"
         android:layout_height="@dimen/widget_button_height"
+        android:contentDescription="@string/add_a_recipe"
         android:src="@drawable/ic_action_widget" />
 
 </RelativeLayout>

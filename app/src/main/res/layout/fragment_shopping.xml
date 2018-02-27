@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/padding_or_margin_16"
-    tools:context="com.shalu.mykitchendiaries.ui.ShoppingActivity$PlaceholderFragment">
+    android:padding="@dimen/padding_or_margin_16">
 
     <LinearLayout
         android:layout_width="match_parent"

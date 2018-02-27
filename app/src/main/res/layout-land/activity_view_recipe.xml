@@ -40,6 +40,7 @@
         <ImageView
             android:id="@+id/image"
             android:transitionName="@string/transition_image"
+            android:contentDescription="@string/recipe_image"
             android:layout_width="@dimen/image_width"
             android:layout_height="@dimen/image_height"
             android:layout_margin="@dimen/padding_or_margin_16"

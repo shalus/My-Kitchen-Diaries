@@ -15,12 +15,6 @@ public class RecipeContract {
 
     @DataType(TEXT) @NotNull
     public static final String TITLE = "title";
-//
-//    @DataType(TEXT)
-//    public static final String INGREDIENTS = "ingredients";
-//
-//    @DataType(TEXT)
-//    public static final String STEPS = "steps";
 
     @DataType(TEXT)
     public static final String IMAGE_PATH = "image";

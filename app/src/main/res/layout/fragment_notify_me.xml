@@ -22,6 +22,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/notify_me"
                 android:paddingBottom="@dimen/padding_or_margin_4"
                 android:paddingRight="@dimen/padding_or_margin_8"
                 android:paddingEnd="@dimen/padding_or_margin_8"
@@ -45,6 +46,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/location_permissions"
                 android:paddingBottom="@dimen/padding_or_margin_4"
                 android:paddingRight="@dimen/padding_or_margin_8"
                 android:paddingEnd="@dimen/padding_or_margin_8"
@@ -68,7 +70,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_marginRight="@dimen/padding_or_margin_8"
+                    android:layout_marginEnd="@dimen/padding_or_margin_8"
                     android:onClick="onLocationPermissionClicked" />
 
             </RelativeLayout>

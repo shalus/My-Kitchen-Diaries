@@ -351,7 +351,7 @@ public class ViewRecipeActivity extends AppCompatActivity {
         getContentResolver().delete(KitchenProvider.Ingredients.CONTENT_URI, IngredientContract.RECIPE+"=?",new String[]{title});
         int n = getContentResolver().delete(KitchenProvider.Recipes.CONTENT_URI,RecipeContract.TITLE+"=?",new String[] {title});
         if(n > 0) {
-            Toast.makeText(this,getResources().getString(R.string.delete_recipe), Toast.LENGTH_SHORT);
+            Toast.makeText(this,getResources().getString(R.string.delete_recipe), Toast.LENGTH_SHORT).show();
         }
 
     }
